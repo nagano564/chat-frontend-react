@@ -1,28 +1,76 @@
-.App {
-  text-align: center;
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+html {
+  background: #526977;
+  font-family: 'Helvetica';
+  color: #333;
+  font-size: 20px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
+div.stage {
+  background: #fff;
+  width: 90%;
+  margin: 20px auto;
   padding: 20px;
-  color: white;
+  box-shadow: 0 0 10px #333;
 }
 
-.App-title {
-  font-size: 1.5em;
+h1 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
 }
 
-.App-intro {
-  font-size: large;
+ul.chat-logs {
+  border: 1px solid #ccc;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  list-style-type: none;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+ul.chat-logs li {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul.chat-logs li span.chat-created-at {
+  font-size: 14px;
+  color: #999;
+}
+
+input.chat-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  margin: 0;
+  border-radius: 3px;
+  width: calc(100% - 22px);
+  outline: none;
+  margin-bottom: 10px;
+}
+
+button.send {
+  background: #333;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 3px;
 }
