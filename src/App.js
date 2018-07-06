@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   createSocket() {
-    let cable = Cable.createConsumer('ws://localhost:3001/cable');
+    let cable = Cable.createConsumer('https://git.heroku.com/infinite-meadow-12842.git');
     this.chats = cable.subscriptions.create({
       channel: 'ChatChannel'
     }, {
